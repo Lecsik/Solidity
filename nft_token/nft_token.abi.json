@@ -1,0 +1,90 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "createTokenBook",
+			"inputs": [
+				{"name":"nameOfBook","type":"string"},
+				{"name":"numberOfPages","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getTokenOwner",
+			"inputs": [
+				{"name":"tokenId","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "getTokenInfo",
+			"inputs": [
+				{"name":"tokenId","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"tokenNameOfBook","type":"string"},
+				{"name":"tokenNumberOfPages","type":"uint256"},
+				{"name":"tokenPrice","type":"uint256"}
+			]
+		},
+		{
+			"name": "changeOwner",
+			"inputs": [
+				{"name":"tokenId","type":"uint256"},
+				{"name":"pubKeyOfNewOwner","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "changeNameOfBook",
+			"inputs": [
+				{"name":"tokenId","type":"uint256"},
+				{"name":"nameOfBook","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "changeNumberOfPages",
+			"inputs": [
+				{"name":"tokenId","type":"uint256"},
+				{"name":"numberOfPages","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setPrice",
+			"inputs": [
+				{"name":"tokenId","type":"uint256"},
+				{"name":"price","type":"uint256"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"components":[{"name":"nameOfBook","type":"string"},{"name":"numberOfPages","type":"uint256"},{"name":"price","type":"uint256"}],"name":"tokensArr","type":"tuple[]"},
+		{"name":"tokenToOwner","type":"map(uint256,uint256)"}
+	]
+}
